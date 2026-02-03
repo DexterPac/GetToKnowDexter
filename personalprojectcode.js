@@ -58,7 +58,28 @@ function changedescription() {
     else if(daimages[currentimage] == "./PersonalProjectImages/personalimage7.png")
     {
         name.textContent = "3D-2D Platformer"
-        description.textContent = "The idea for this platformer will never be completed, but it was a great way for me to experiment with how our perception influences our decision making. For example, there was a wall I constructed that, while in 3D mode, you clearly could not pass; however, if you were in 2D mode, the wall blended in with the adjacent wall, allowing you to pass as if it were never there. I really enjoy such a concept, and I do hope that I will be fortunate enough to build such a game in the future."
+        description.textContent = "The idea for this platformer has been continued to be explored and expanded upon. I find it interesting how our perception influences our decision making. For example, there was a wall I constructed that, while in 3D mode, you clearly could not pass; however, if you were in 2D mode, the wall blended in with the adjacent wall, allowing you to pass as if it were never there. I really enjoy such a concept, and I do hope that I will be fortunate enough to build such a game in the future."
+        let originalText = description.textContent;
+        let targetWord = "platformer";
+        let startIndex = originalText.indexOf(targetWord);
+
+        if (startIndex !== -1) {
+            let beforeText = originalText.substring(0, startIndex);
+            let afterText = originalText.substring(startIndex + targetWord.length);
+
+            //Create the anchor element
+            let linkElement = document.createElement('a');
+            linkElement.href = "https://dexterpaclebar.itch.io/3d2d"; //desired URL
+            linkElement.textContent = targetWord;
+
+            //Clear the original paragraph content
+            description.innerHTML = '';
+
+            //Append the parts back with the link in between
+            description.appendChild(document.createTextNode(beforeText));
+            description.appendChild(linkElement);
+            description.appendChild(document.createTextNode(afterText));
+        }
     }
 
 }
