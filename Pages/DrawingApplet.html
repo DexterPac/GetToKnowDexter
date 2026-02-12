@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Projects</title>
-    <link rel="stylesheet" href="sipprojectstyle.css">
+    <title>DrawingApplet</title>
+    <link rel="stylesheet" href="./Code/DrawingAppletStyle.css">
 </head>
 <body>
     
     <div id="centerbox" class="changecolor3">
         <div id="topwindowpanel" class="changecolor2" style="width:100%; height:5%; background-color:rgb(221, 221, 221); top:0; left:0; position:absolute;">  
-            <img src="./smushednetbeanslogo.png" style=" width:3%;height:80%;object-fit:contain; top:10%; bottom:10%;position:absolute;">
-            <div id = "nextslidediv" style="width:100%;position:relative; text-align:center; top:25%;">
-                <a id="backslide" class="slidelink classblue" href="#" >&lt;&lt; Previous Slide</a>
-                <a id="nextslide" class="slidelink classblue" href="#" >Next Slide &gt;&gt;</a>   
-            </div>  
+            <img src="../smushednetbeanslogo.png" style=" width:3%;height:80%;object-fit:contain; top:10%; bottom:10%;position:absolute;">
+            <div id="toolbar" style="width:100%;position:relative; text-align:center; top:0;">
+                <label for="stroke" class="normaltextcolor">Stroke</label>
+                <input id="stroke" name='stroke' type="color">
+                <label for="lineWidth" class="normaltextcolor">Line Width</label>
+                <input id="lineWidth" name='lineWidth' type="number" value="5">
+                <button id="clear">Clear</button>
+                <button class="btn" onClick="downloadImage();">Download</button>
+                <input type="file" id="imageInput" accept="image/*" onClick="handleImage();" class="normaltextcolor">
+            </div>
         </div>
         
         <div id="mainwindow" class="changecolor4" style="width:100%; height:95%; top: 5%; background-color:rgb(148, 148, 148);position:absolute;">
-             <img id="mainshowimage" src="./SipImages/sipimage1.png" style=" width:100%;height:100%;object-fit:contain;position:absolute;">   
+            <canvas id="drawing-board"></canvas>
         </div>
     </div>
     <div id="leftbar" class="changecolor3">
@@ -26,7 +31,7 @@
 
         <div class="sideoptions">
             <div style ="width:10%; height:80%; min-height:20px; position:absolute; text-align:center; left:0; margin:2%;">
-                <img src="./CoffeeCup.png" id="image1" style="width:100%; height:100%; object-fit:contain;">
+                <img src="../CoffeeCup.png" id="image1" style="width:100%; height:100%; object-fit:contain;">
             </div>
     
             <form action="Index.html" id="homepage" class="leftbarlinks">
@@ -37,7 +42,7 @@
         <!--------------------------->
         <div class="sideoptions">
             <div style ="width:10%; height:80%; min-height:20px; position:absolute; text-align:center; left:0; margin:2%;">
-                <img src="./CoffeeCup.png" id="image1" style="width:100%; height:100%; object-fit:contain;">
+                <img src="../CoffeeCup.png" id="image1" style="width:100%; height:100%; object-fit:contain;">
             </div>
     
             <form action="PersonalProjects.html" id="minorpersonalProjects" class="leftbarlinks">
@@ -48,7 +53,7 @@
         <!--------------------------->
         <div class="sideoptions">
             <div style ="width:10%; height:80%; min-height:20px; position:absolute; text-align:center; left:0; margin:2%;">
-                <img src="./CoffeeCup.png" id="image1" style="width:100%; height:100%; object-fit:contain;">
+                <img src="../CoffeeCup.png" id="image1" style="width:100%; height:100%; object-fit:contain;">
             </div>
     
             <form action="DrawingApplet.html" class="leftbarlinks">
@@ -59,7 +64,7 @@
         <!--------------------------->
         <div class="sideoptions">
             <div style ="width:10%; height:80%; min-height:20px; position:absolute; text-align:center; left:0; margin:2%;">
-                <img src="./CoffeeCup.png" id="image1" style="width:100%; height:100%; object-fit:contain;">
+                <img src="../CoffeeCup.png" id="image1" style="width:100%; height:100%; object-fit:contain;">
             </div>
     
             <form action="Resume.html" class="leftbarlinks">
@@ -67,10 +72,10 @@
             </form>
         </div>
 
-         <!--------------------------->
+        <!--------------------------->
         <div class="sideoptions">
             <div style ="width:10%; height:80%; min-height:20px; position:absolute; text-align:center; left:0; margin:2%;">
-                <img src="./CoffeeCup.png" id="image1" style="width:100%; height:100%; object-fit:contain;">
+                <img src="../CoffeeCup.png" id="image1" style="width:100%; height:100%; object-fit:contain;">
             </div>
     
             <form action="SipProject.html" class="leftbarlinks">
@@ -83,7 +88,7 @@
     <div id="topbar" class="changecolor1">
         
         <div id="toptopbar" class="changecolor1">
-            <img src="./netbeansui.png" id="image2" style="width:100%; height:100%; object-fit:contain;">
+            <img src="../netbeansui.png" id="image2" style="width:100%; height:100%; object-fit:contain;">
             <button id="themebutton" class="btn" onClick="ChangeTheme();" style="position:absolute; width:100%; height:100%;"></button>
         </div>
 
@@ -113,15 +118,13 @@
     <div id="bottombar" class="changecolor3">
         <div id="footertopbar" class="changecolor2"></div>
         <div id="footertopbarbox" class="changecolor3">
-             <p id="SipTab" class="normaltextcolor">Problem</p>
+            <p id="GameName" class="normaltextcolor">Output:</p>
         </div>
 
         <footer id="theinformationfooter">
-            <p id="p1" class="normaltextcolor">In an increasingly, fast paced society we find ourselves to be in, it can sometimes be challenging to keep one’s 
-                main task or goal in mind. This is especially true for those who attract unwanted distractions. While eliminating any chance of distractions to occur 
-                is a hefty challenge, it is an arguably unreasonable standard. Instead, there needs to be some sort of tool that can help reduce the chance of a distraction 
-                in addition to being able to redirect its user back on track in the event of one occurring.
-            </p> 
+            <p id="p1" class="normaltextcolor">If you are experiencing issues with line drawing not matching mouse position, it is likely due to a change in
+            window resolution. Please refresh the page. (Note that this will also clear your drawing!)
+            </p>
             <p id="footertext">BUILD SUCCESSFUL</p>
         </footer>
 
@@ -131,5 +134,5 @@
 </body>
 </html>
 
-<script src="themechanger.js"></script>
-<script src="sipprojectcode.js"></script>
+<script src="./Code/themechanger.js"></script>
+<script src="./Code/DrawingAppletCode.js"></script>
