@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="140" viewBox="0 0 160 140">
+  <defs>
+    <pattern id="hazardPattern" width="160" height="140" patternUnits="userSpaceOnUse">
+
+      <!-- Green warning triangle -->
+      <polygon
+        points="80,10 150,130 10,130"
+        fill="#85BF32"
+        stroke="#354D14"
+        stroke-width="10"
+        stroke-linejoin="round"
+      />
+
+      <!-- Exclamation mark (white) -->
+      <rect x="74" y="50" width="12" height="40" fill="#ffffff"/>
+      <circle cx="80" cy="105" r="6" fill="#ffffff"/>
+
+    </pattern>
+  </defs>
+
+  <!-- Fill the whole SVG with the pattern -->
+  <rect width="100%" height="100%" fill="url(#hazardPattern)" />
+</svg>
