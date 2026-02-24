@@ -30,6 +30,11 @@ function ImportTheme() {
     if(isTrueSet)
     {
         document.getElementById("image2").src = "../netbeansui.png"
+        let smallthemebox = document.getElementById("themeindicator")
+        smallthemebox.style.borderColor = "black"
+        smallthemebox.style.color = "black"
+        smallthemebox.style.left = "28.5%"
+        smallthemebox.textContent = "<Light Mode>"
         let stuff = document.getElementsByClassName("changecolor1")
         for(let b = 0; b < stuff.length; b++)
         {
@@ -100,6 +105,11 @@ function ImportTheme() {
     else
     {
         document.getElementById("image2").src = "../netbeansui2.png"
+        let smallthemebox = document.getElementById("themeindicator")
+        smallthemebox.style.borderColor = "#C7C7C7"
+        smallthemebox.style.color = "white"
+        smallthemebox.style.left = "32.5%"
+        smallthemebox.textContent = "<Dark Mode>"
         let stuff = document.getElementsByClassName("changecolor1")
         for(let b = 0; b < stuff.length; b++)
         {

@@ -84,6 +84,7 @@
     border: 1px solid black;
     top: 0;
     left: 0;
+    align-items: center;
 }
 
 #themebutton {
@@ -94,6 +95,26 @@
 #themebutton:hover {
     background-color: rgba(24, 30, 66, 0.3);
     
+}
+
+#themeindicator {
+    display: flex;
+    position:absolute;
+    width: 6%;
+    height: 80%;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    left: 28.5%;
+    user-select: none; /*content inside div cannot be highlighted*/
+    border: 1px solid rgb(0, 0, 0);
+}
+#themeindicator:hover {
+    cursor: default; /*cursor voer this div will simply appear as default*/
+
+}
+#toptopbar:has(#themeindicator:hover) #themebutton { /*have to use [parent]:has(divname) because of elements cannot acces a 'previous siblin'*/
+     background-color: rgba(24, 30, 66, 0.3);
 }
 
 #formlinks {
