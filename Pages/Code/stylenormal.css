@@ -20,6 +20,28 @@ body {
         font-size: 35px;
     }
 }
+
+#returnformbutton {
+    left: 0;
+    margin-bottom: 3%;
+    max-width: 10%;
+    height: 5vh;
+    min-height:15px;
+}
+#returnbutton {
+    /*position: relative;*/
+    background-color: rgba(177, 33, 14, 0.98);
+    color: white;
+    border: none;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+}
+#returnbutton:hover {
+    background-color: rgba(126, 24, 11, 0.98);
+    
+}
 /*///////////////////////////////////\/\/\/\/\/\/\/main content\/\/\/\/\/\/\/////////////////////////////////////*/
 #maincontent {
     text-align: center;
@@ -49,6 +71,18 @@ body {
         /*margin-block-end: 0;*/
         margin-top: 10%;
     }
+
+    h3 {
+        width: 15%;
+        font-size: 32px;
+        /*background-color: rgba(69, 99, 26, 0.4);*/
+        background-color: rgba(55, 79, 21, 0.98);
+        padding: 0.5%;
+        /*margin-block-end: 0;*/
+        margin-top: 5%;
+        color: yellow
+    }
+
 }
 
 .maincontentsection {
@@ -70,6 +104,7 @@ body {
         height:42%; 
         object-fit:contain; 
     }
+
 }
 
 .maincontentsection1 {
@@ -90,7 +125,46 @@ body {
         margin-left: 5%;
     }
 }
+#briefbuttonform {
+    position: relative;
+    left: 40%;
+    margin: 3%;
+    max-width: 15%;
+    height: 10vh;
+    min-height:15px;
+}
+#briefbutton {
+    /*position: relative;*/
+    background-color: rgba(55, 79, 21, 0.98);
+    color: white;
+    border: none;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+}
+#briefbutton:hover {
+    background-color: rgba(37, 53, 14, 0.98);
+    
+}
 
+.mainlistcontentsection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*background-color: #45631A;*/
+    /*background-color: rgba(69, 99, 26, 0.8);*/
+    /*#374F15*/
+    background-color: rgba(55, 79, 21, 0.98);
+
+    p {
+        width:100%;
+        height:100%;
+        margin-right: 5%;
+    }
+
+
+}
 /*///////////////////////////////////\/\/\/\/\/\/\/main body background\/\/\/\/\/\/\/////////////////////////////////////*/
 
 #patternedbackground {
