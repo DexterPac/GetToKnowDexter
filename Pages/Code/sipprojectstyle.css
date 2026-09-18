@@ -194,6 +194,29 @@
     }
 }
 
+#footertopbarbutton {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    width: 10%;
+    height: 19%;
+    background-color: rgb(199, 199, 199);
+    border: 1px solid black;
+    top: 0;
+    right: 0;
+    left: 90%;
+}
+
+#siplog {
+    background-color: transparent;
+    border: 0px solid rgb(0, 0, 0);
+    /*box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);*/
+}
+#siplog:hover {
+    background-color: rgba(24, 30, 66, 0.3);
+    
+}
+
 footer {
     margin-left: calc((1vw + 1vh) * 0.50);
     font-family: "Lucida Console", "Courier New", monospace;
