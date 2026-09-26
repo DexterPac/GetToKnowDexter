@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIP Brief Log</title>
-     <link rel="stylesheet" href="./Code/stylenormal.css">
+     <link rel="stylesheet" href="./Code/sipbriefstylenormal.css">
 </head>
 <body>
     <form action="./SipProjectNormal.html" id="returnformbutton">
@@ -14,155 +14,305 @@
         <h1 style="outline: rgba(55, 79, 21, 0.98) solid 7px;">Task Goblin</h1>
     </div>
     <div style="display:inline-block; width:100%; height:5vh;"></div>
-   <div id="patternedbackground">
-         <div id="maincontent">
-            <h3>Technical Field</h3>
-            <div class="maincontentsection1 mainlistcontentsection">
-                <p>
-                  This project involves the technical fields of web application development and browser extension 
-                  development, with emphasis on front-end programming and user-focused interface design. The 
-                  intended major behind this field is focused around Computer Science.
-                </p>
-            </div>  
-            <h3>Background Information</h3>
-            <div class="maincontentsection1 mainlistcontentsection">
-                <p>
-                  In an increasingly fast-paced, digitally driven environment, maintaining focus on a primary 
-                  task has become more difficult due to constant online distractions. Productivity tools often 
-                  attempt to eliminate distractions entirely, which is an unrealistic expectation for most users. 
-                  The inspiration for this project comes from the need for a balanced solution that not only 
-                  discourages distractions but also actively redirects users back to their goals when distractions 
-                  occur. By integrating motivation, time awareness, and optional enforcement directly into the 
-                  browser, this project addresses a growing demand for adaptable productivity tools that align 
-                  with real-world user behavior rather than rigid control.
-                </p>
-            </div>   
-            <h3>Prior Art (Research)</h3>
-            <div class="maincontentsection1 mainlistcontentsection">
-                <p>
-                 Motivate is a Chrome extension that displays a constant visual reminder of a user’s goal and 
-                 target date across browser tabs to encourage focus. While effective as a passive reminder, it 
-                 does not actively intervene when distractions occur. Task Goblin differs by incorporating 
-                 interactive pop-ups, progress check-ins, and optional anti-distraction mechanisms with 
-                 adjustable severity levels, providing a more adaptive and responsive approach to focus 
-                 management. StayFocusd is a productivity extension that restricts or blocks access to 
-                 time-wasting websites once predefined usage limits are reached. Although effective for strict 
-                 enforcement, it lacks motivational and goal-oriented components. Task Goblin combines website 
-                 warnings and optional blocking with goal tracking and motivational feedback, allowing users to 
-                 choose between guidance and restriction within a single unified system.
-                 <br>
-                Boje, J. (n.d.). Motivate – Reach Your Goals. Google Chrome Web Store.
-                . (n.d.). StayFocusd – Website Blocker & Focus Timer. Google Chrome Web Store.
-                </p>
-            </div>  
-            <h3>Project Description</h3>
-            <div class="maincontentsection1 mainlistcontentsection">
-                <p>
-                  This project proposes the development of a browser-based task reminder and anti-distraction extension 
-                  designed to help users remain focused during online activities. The extension supports task creation, 
-                  time tracking, progress check-ins, and customizable interventions when distractions occur. Intended for 
-                  students, remote workers, and professionals, the application integrates motivational reminders and optional 
-                  restriction tools directly into the browser to reduce cognitive load and eliminate the need for multiple 
-                  productivity applications.
-                </p>
-            </div>  
-            <h3>Innovation Claim</h3>
-            <div class="maincontentsection1 mainlistcontentsection">
-                <p>
-                  This project is innovative because it combines goal tracking, motivational feedback, and 
-                  customizable anti-distraction enforcement into a single browser extension that adapts to 
-                  varying user needs rather than enforcing a one-size-fits-all productivity solution.
-                </p>
-            </div>  
-            <h3>Usage Scenario</h3>
-            <div class="maincontentsection1 mainlistcontentsection">
-                <p>
-                  Beyond individual productivity, this innovation could be used in structured learning or training 
-                  environments where maintaining focus is critical, such as online coursework platforms or remote 
-                  onboarding programs. In these contexts, the system could guide users back to assigned materials,
-                   reinforce time-bound objectives, and discourage unrelated browsing without fully restricting 
-                   access. The value provided lies in its adaptability, supporting accountability and 
-                   self-regulation while preserving user autonomy.
-                </p>
-            </div>  
 
-            <div style="position:absolute; width:100%; height:3vh; left:0; background-color:white; margin-top: 3%;"></div>
-            <br> <!--lazy temp fix-->
+    <!------------MAIN CONTENT--------------->
+    <div id="maincontent">
+      <div style="display:inline-block; width:100%; height:10vh;"></div>
 
-            <h3>Evaluation Criteria</h3>
-            <div class="listcontentsection">
-                <p class="bolded">“The following questions will identify the successful completion of the project.”</p>
-                <ul style="font-size:24px;">
-                    <li>Does the extension allow users to create and manage tasks with time limits?</li>
-                    <li>Do motivational reminders appear at appropriate intervals?</li>
-                    <li>Can users define distraction websites for warnings or restrictions?</li>
-                    <li>Does the extension support multiple intervention intensity levels?</li>
-                    <li>Is the user interface intuitive and easy to navigate?</li>
-                    <li>Do anti-distraction features activate correctly when conditions are met?</li>
-                    <li>Can users modify or disable features without breaking functionality?</li>
-                    <li>Does the extension operate without noticeable performance issues?</li>
-                </ul>
-            </div>  
-            <h3>Goals & Tasks Associated With Project</h3>
-            <div class="listcontentsection">
-                <p>
-                  <span class="bolded">Objective 1: Core Extension Functionality</span>
-                  <br>
-                  <span class="italic">Task 1.1 – Browser Extension Setup (Target: Early Development Phase)</span>
-                  <br>
-                  Set up the Chrome extension framework, including manifest configuration and basic file structure.
-                   Decisions will be guided by Chrome extension policy requirements and scalability considerations.
-                </p>
-                <p>
-                  <span class="italic">Task 1.2 – Task and Time Management System</span>
-                  <br>
-                  Implement task creation, editing, and time tracking features using JavaScript and browser 
-                  storage APIs. Design decisions will prioritize clarity and minimal user input.
-                </p>
-                <div style="position:relative; width:100%; height:1vh; left:0; background-color:#85BF32;"></div>
-                <p>
-                  <span class="bolded">Objective 2: Anti-Distraction Features</span>
-                  <br>
-                  <span class="italic">Objective 2: Anti-Distraction Features</span>
-                  <br>
-                  Develop logic to detect user visits to predefined distraction websites and trigger warnings 
-                  or interventions accordingly.
-                </p>
-                <p>
-                  <span class="italic">Task 2.2 – Intensity Level Controls</span>
-                  <br>
-                  Implement multiple intervention levels, allowing users to adjust how aggressively the extension responds 
-                  to distractions.
-                </p>
-                <div style="position:relative; width:100%; height:1vh; left:0; background-color:#85BF32;"></div>
-                <p>
-                  <span class="bolded">Objective 3: User Interface and Experience</span>
-                  <br>
-                  <span class="italic">Task 3.1 – Interface Design</span>
-                  <br>
-                    Design a clean and minimal user interface using HTML and CSS to ensure ease of navigation 
-                    and low cognitive load.
-                </p>
-                <p>
-                  <span class="italic">Task 3.2 – User Feedback and Testing</span>
-                  <br>
-                  Conduct informal usability testing to refine interface flow and feature clarity based on observed behavior.
-                </p>
-            </div>  
-            <h3>Description of Prototype</h3>
-            <div class="maincontentsection1 mainlistcontentsection">
-                <p>
-                    The design prototype will be implemented as a Chrome browser extension developed using 
-                    HTML, CSS, and JavaScript. The prototype will include a basic task setup interface, a 
-                    settings panel for intervention intensity, and functional pop-up reminders. Users will 
-                    install the extension locally in developer mode and interact with it through the browser 
-                    toolbar. The prototype will demonstrate the core functionality of task reminders, distraction 
-                    detection, and adjustable intervention behavior, serving as a foundation for the final 
-                    project.
-                </p>
-            </div>  
+      <div class="h2underline bolded" style="width: 20%;">Objectives</div>
+      <div class="anchorbuttonssection">
+        <button type="button" id="extensionsetupbutton" class="anchorlinkbuttons" onclick="location.href='#extensionsetupsection'">Extension Setup</button>
+        <button type="button" id="managementsystembutton" class="anchorlinkbuttons" onclick="location.href='#managementsystemsection'">Management System</button>
+        <button type="button" id="distractiondetectionbutton" class="anchorlinkbuttons" onclick="location.href='#distractiondetectionsection'">Distraction Detection</button>
+      </div>
 
+      <div class="anchorbuttonssection">
+        <button type="button" id="intesitycontrolsbutton" class="anchorlinkbuttons" onclick="location.href='#intensitycontrolssection'">Intensity Controls</button>
+        <button type="button" id="interfacedesignbutton" class="anchorlinkbuttons" onclick="location.href='#interfacedesignsection'">Interface Design</button>
+        <button type="button" id="usertestingbutton" class="anchorlinkbuttons" onclick="location.href='#usertestingsection'">User Testing</button>
+      </div>
+
+      <!----------EXTENSION SETUP------------->
+      <div id="extensionsetupsection" class="tasksection">
+        <div class="tasksectiontopbar">
+              <h3 class="bolded tasktitle">Task 1.1 - Browser Setup</h3>
+              <h3 class="taskstatus" style="background-color: orange; ">Status: In Development</h3>
         </div>
+        <div class="taskcontentsection">
+          <div class="tasksectionbackground">
+            <p class="bolded" style="text-decoration: underline;">Description:</p>
+            <p>
+            Set up the Chrome extension framework, including manifest configuration and basic file structure. 
+            Decisions will be guided by Chrome extension policy requirements and scalability considerations.
+            </p>
+          </div>
+          <ul class="tasksectionnotes">
+             <p class="italic sip408" style="text-decoration: underline;">9/12/26</p>
+             <p class="notesindent">
+                Read and review of several browser's extension creation policies. Ex: Google Chrome's extension program policies 
+                <a href="https://developer.chrome.com/docs/webstore/program-policies/policies"> https://developer.chrome.com/docs/webstore/program-policies/policies</a>
+              </p>
+          </ul>
+        </div>
+      </div>
+
+      <!-----------MANAGEMENTS YSTEM------------>
+      <div style="width:75%; border-top: 8px dashed rgba(55, 79, 21, 0.98); position:relative; margin-top: 60px;"></div>
+
+      <div id="managementsystemsection" class="tasksection">
+        <div class="tasksectiontopbar">
+              <h3 class="bolded tasktitle">Task 1.2 - Management System</h3>
+              <h3 class="taskstatus" style="background-color: orange; ">Status: In Development</h3>
+        </div>
+        <div class="taskcontentsection">
+          <div class="tasksectionbackground">
+            <p class="bolded" style="text-decoration: underline;">Description:</p>
+            <p>
+            Implement task creation, editing, and time tracking features using JavaScript and browser storage 
+            APIs. Design decisions will prioritize clarity and minimal user input.
+            </p>
+          </div>
+          <ul class="tasksectionnotes">
+             <p class="italic sip408" style="text-decoration: underline;">9/19/26</p>
+             <p class="notesindent">Added cross-browser extension popup that features basic task creation entry field and a list to display them</p>
+          </ul>
+        </div>
+      </div>
+
+      <!----------DISTRACTION DETECTION------------->
+      <div style="width:75%; border-top: 8px dashed rgba(55, 79, 21, 0.98); position:relative; margin-top: 60px;"></div>
+
+        <div id="distractiondetectionsection" class="tasksection">
+          <div class="tasksectiontopbar">
+                <h3 class="bolded tasktitle">Task 2.1 - Distraction Detection</h3>
+                <h3 class="taskstatus" style="background-color: red; ">Status: Incomplete</h3>
+          </div>
+          <div class="taskcontentsection">
+            <div class="tasksectionbackground">
+              <p class="bolded" style="text-decoration: underline;">Description:</p>
+              <p>
+              Develop logic to detect user visits to predefined distraction websites and trigger warnings or 
+              interventions accordingly.
+              </p>
+            </div>
+            <ul class="tasksectionnotes">
+              
+            </ul>
+        </div>
+      </div>
+
+      <!----------INTENSITY CONTROLS------------->
+      <div style="width:75%; border-top: 8px dashed rgba(55, 79, 21, 0.98); position:relative; margin-top: 60px;"></div>
+
+        <div id="intensitycontrolssection" class="tasksection">
+          <div class="tasksectiontopbar">
+                <h3 class="bolded tasktitle">Task 2.2 - Intensity Controls</h3>
+                <h3 class="taskstatus" style="background-color: red; ">Status: Incomplete</h3>
+          </div>
+          <div class="taskcontentsection">
+            <div class="tasksectionbackground">
+              <p class="bolded" style="text-decoration: underline;">Description:</p>
+              <p>
+              Develop logic to detect user visits to predefined distraction websites and trigger warnings or 
+              interventions accordingly.Implement multiple intervention levels, allowing users to adjust how 
+              aggressively the extension responds to distractions.
+              </p>
+            </div>
+            <ul class="tasksectionnotes">
+              
+            </ul>
+        </div>
+      </div>
+
+      <!----------INTERFACE DESIGN------------->
+      <div style="width:75%; border-top: 8px dashed rgba(55, 79, 21, 0.98); position:relative; margin-top: 60px;"></div>
+
+        <div id="interfacedesignsection" class="tasksection">
+          <div class="tasksectiontopbar">
+                <h3 class="bolded tasktitle">Task 3.1 - Interface Design</h3>
+                <h3 class="taskstatus" style="background-color: red; ">Status: Incomplete</h3>
+          </div>
+          <div class="taskcontentsection">
+            <div class="tasksectionbackground">
+              <p class="bolded" style="text-decoration: underline;">Description:</p>
+              <p>
+              Design a clean and minimal user interface using HTML and CSS to ensure ease of navigation and low 
+              cognitive load.
+              </p>
+            </div>
+            <ul class="tasksectionnotes">
+              
+            </ul>
+        </div>
+      </div>
+
+      <!----------USER TESTING------------->
+      <div style="width:75%; border-top: 8px dashed rgba(55, 79, 21, 0.98); position:relative; margin-top: 60px;"></div>
+
+        <div id="usertestingsection" class="tasksection">
+          <div class="tasksectiontopbar">
+                <h3 class="bolded tasktitle">Task 3.2 - User Testing</h3>
+                <h3 class="taskstatus" style="background-color: red; ">Status: Incomplete</h3>
+          </div>
+          <div class="taskcontentsection">
+            <div class="tasksectionbackground">
+              <p class="bolded" style="text-decoration: underline;">Description:</p>
+              <p>
+              Conduct informal usability testing to refine interface flow and feature clarity based on observed behavior.
+              </p>
+            </div>
+            <ul class="tasksectionnotes">
+              
+            </ul>
+        </div>
+      </div>
+
+      <!--------------------SIP BRIEF----------------------->
+      <div style="display:inline-block; width:100%; height:5vh; background-color: rgba(55, 79, 21, 0.98); margin: 40px"></div>
+
+      <div id="headercontent" style="width:35%; position: relative; margin-bottom: 25px;">
+        <h1 style="outline: rgba(55, 79, 21, 0.98) solid 7px; height: 100px; display: flex; align-items: center; justify-content: center;">Sip Brief</h1>
+      </div>
+
+      <div style="display:inline-block; width:100%; height:5vh;"></div>
+
+      <div class="h2underline bolded" style="width: 23%;">Technical Field</div>
+      <p class="mainbriefsectiontext">
+        This project involves the technical fields of web application development and browser extension 
+        development, with emphasis on front-end programming and user-focused interface design. The 
+        intended major behind this field is focused around Computer Science.
+      </p>
+
+      <div class="h2underline bolded" style="width: 35%;">Background Information</div>
+      <p class="mainbriefsectiontext">
+        In an increasingly fast-paced, digitally driven environment, maintaining focus on a primary 
+        task has become more difficult due to constant online distractions. Productivity tools often 
+        attempt to eliminate distractions entirely, which is an unrealistic expectation for most users. 
+        The inspiration for this project comes from the need for a balanced solution that not only 
+        discourages distractions but also actively redirects users back to their goals when distractions 
+        occur. By integrating motivation, time awareness, and optional enforcement directly into the 
+        browser, this project addresses a growing demand for adaptable productivity tools that align 
+        with real-world user behavior rather than rigid control.
+      </p>
+
+      <div class="h2underline bolded" style="width: 20%;">Prior Art</div>
+      <p class="mainbriefsectiontext">
+        Motivate is a Chrome extension that displays a constant visual reminder of a user’s goal and 
+        target date across browser tabs to encourage focus. While effective as a passive reminder, it 
+        does not actively intervene when distractions occur. Task Goblin differs by incorporating 
+        interactive pop-ups, progress check-ins, and optional anti-distraction mechanisms with 
+        adjustable severity levels, providing a more adaptive and responsive approach to focus 
+        management. StayFocusd is a productivity extension that restricts or blocks access to 
+        time-wasting websites once predefined usage limits are reached. Although effective for strict 
+        enforcement, it lacks motivational and goal-oriented components. Task Goblin combines website 
+        warnings and optional blocking with goal tracking and motivational feedback, allowing users to 
+        choose between guidance and restriction within a single unified system.
+        <br>
+        Boje, J. (n.d.). Motivate – Reach Your Goals. Google Chrome Web Store.
+        . (n.d.). StayFocusd – Website Blocker & Focus Timer. Google Chrome Web Store.
+      </p>
+
+      <div class="h2underline bolded" style="width: 30%;">Project Description</div>
+      <p class="mainbriefsectiontext">
+        This project proposes the development of a browser-based task reminder and anti-distraction extension 
+        designed to help users remain focused during online activities. The extension supports task creation, 
+        time tracking, progress check-ins, and customizable interventions when distractions occur. Intended for 
+        students, remote workers, and professionals, the application integrates motivational reminders and optional 
+        restriction tools directly into the browser to reduce cognitive load and eliminate the need for multiple 
+        productivity applications.
+      </p>
+
+      <div class="h2underline bolded" style="width: 23%;">Innovation Claim</div>
+      <p class="mainbriefsectiontext">
+        This project is innovative because it combines goal tracking, motivational feedback, and 
+        customizable anti-distraction enforcement into a single browser extension that adapts to 
+        varying user needs rather than enforcing a one-size-fits-all productivity solution.
+      </p>
+
+      <div class="h2underline bolded" style="width: 23%;">Usage Scenario</div>
+      <p class="mainbriefsectiontext">
+        Beyond individual productivity, this innovation could be used in structured learning or training 
+        environments where maintaining focus is critical, such as online coursework platforms or remote 
+        onboarding programs. In these contexts, the system could guide users back to assigned materials,
+        reinforce time-bound objectives, and discourage unrelated browsing without fully restricting 
+        access. The value provided lies in its adaptability, supporting accountability and 
+        self-regulation while preserving user autonomy.
+      </p>
+
+      <div class="h2underline bolded" style="width: 30%;">Evaluation Criteria</div>
+      <div class="mainbriefsectiontext">
+        <ul style="font-size:24px;">
+            <li>Does the extension allow users to create and manage tasks with time limits?</li>
+            <li>Do motivational reminders appear at appropriate intervals?</li>
+            <li>Can users define distraction websites for warnings or restrictions?</li>
+            <li>Does the extension support multiple intervention intensity levels?</li>
+            <li>Is the user interface intuitive and easy to navigate?</li>
+            <li>Do anti-distraction features activate correctly when conditions are met?</li>
+            <li>Can users modify or disable features without breaking functionality?</li>
+            <li>Does the extension operate without noticeable performance issues?</li>
+        </ul>
+      </div>
+
+      <!-------->
+      <div class="h2underline bolded" style="width: 45%; margin-top:25px;">Goals & Tasks Associated with Project</div>
+      <div class="mainbriefsectiontext">
+        <p>
+          <span class="bolded">Objective 1: Core Extension Functionality</span>
+          <br>
+          <span class="italic">Task 1.1 – Browser Extension Setup (Target: Early Development Phase)</span>
+          <br>
+          Set up the Chrome extension framework, including manifest configuration and basic file structure.
+            Decisions will be guided by Chrome extension policy requirements and scalability considerations.
+        </p>
+        <p>
+          <span class="italic">Task 1.2 – Task and Time Management System</span>
+          <br>
+          Implement task creation, editing, and time tracking features using JavaScript and browser 
+          storage APIs. Design decisions will prioritize clarity and minimal user input.
+        </p>
+        <div style="position:relative; width:100%; height:1vh; left:0; background-color:#85BF32;"></div>
+        <p>
+          <span class="bolded">Objective 2: Anti-Distraction Features</span>
+          <br>
+          <span class="italic">Objective 2: Anti-Distraction Features</span>
+          <br>
+          Develop logic to detect user visits to predefined distraction websites and trigger warnings 
+          or interventions accordingly.
+        </p>
+        <p>
+          <span class="italic">Task 2.2 – Intensity Level Controls</span>
+          <br>
+          Implement multiple intervention levels, allowing users to adjust how aggressively the extension responds 
+          to distractions.
+        </p>
+        <div style="position:relative; width:100%; height:1vh; left:0; background-color:#85BF32;"></div>
+        <p>
+          <span class="bolded">Objective 3: User Interface and Experience</span>
+          <br>
+          <span class="italic">Task 3.1 – Interface Design</span>
+          <br>
+            Design a clean and minimal user interface using HTML and CSS to ensure ease of navigation 
+            and low cognitive load.
+        </p>
+        <p>
+          <span class="italic">Task 3.2 – User Feedback and Testing</span>
+          <br>
+          Conduct informal usability testing to refine interface flow and feature clarity based on observed behavior.
+        </p>
+      </div> 
+
+      <div class="h2underline bolded" style="width: 35%; margin-top: 25px;">Description of Design Pototype</div>
+      <p class="mainbriefsectiontext">
+        The design prototype will be implemented as a Chrome browser extension developed using 
+        HTML, CSS, and JavaScript. The prototype will include a basic task setup interface, a 
+        settings panel for intervention intensity, and functional pop-up reminders. Users will 
+        install the extension locally in developer mode and interact with it through the browser 
+        toolbar. The prototype will demonstrate the core functionality of task reminders, distraction 
+        detection, and adjustable intervention behavior, serving as a foundation for the final 
+        project.
+      </p>
+
     </div>
+
 </body>
 </html>
