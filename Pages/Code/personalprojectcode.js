@@ -7,7 +7,7 @@ document.getElementById("footertext").innerText += " " + loadduration/1000 + " S
 
 document.addEventListener('DOMContentLoaded', initLinks);
 //"../" instead of "../../" because when page loaded, we are not sourcing from the js file location, but from the html file location
-var daimages = ["../PersonalProjectImages/personalimage1.png","..//PersonalProjectImages/personalimage2.png","../PersonalProjectImages/personalimage3.png","../PersonalProjectImages/personalimage7.png"];
+var daimages = ["../PersonalProjectImages/personalimage1.png","../PersonalProjectImages/personalimage2.png","../PersonalProjectImages/personalimage3.png","../PersonalProjectImages/personalimage7.png"];
 var currentimage = 0;
 
 function initLinks() {
