@@ -206,13 +206,32 @@
     right: 0;
     left: 90%;
 }
+#footertopbarbutton2 {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(199, 199, 199);
+    border: 1px solid black;
+}
+#footertopbarbuttondiv {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    /*justify-content: space-between;*/
+    justify-content: center;
+    width: 23%;
+    height: 19%;
+    top: 0;
+    right: 0;
+    /*left: 77%;*/
+}
 
-#siplog {
+.sipbriefbtn {
     background-color: transparent;
     border: 0px solid rgb(0, 0, 0);
     /*box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);*/
 }
-#siplog:hover {
+.sipbriefbtn:hover {
     background-color: rgba(24, 30, 66, 0.3);
     
 }

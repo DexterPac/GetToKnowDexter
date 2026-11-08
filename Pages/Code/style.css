@@ -253,6 +253,8 @@ footer {
     p {
         margin-right: calc((1vw + 1vh) * 1.70);
         font-size: calc((1vw + 1vh) * 0.725);
+        margin-top: 0.8%;
+        margin-bottom: 0;
     }
 
     overflow-y: auto;
@@ -290,10 +292,10 @@ footer {
     left: 0;
     top: 0;
     margin-left: calc((1vw + 1vh) * 0.4);
-    margin-top: calc((1vw + 1vh) * 0.26);
+    margin-top: calc((1vw + 1vh) * 0.3);
     text-align: right;
     font-size: calc((1vw + 1vh) * 0.70);
-    line-height: calc((1vw + 1vh) * 0.95);
+    line-height: calc((1vw + 1vh) * 1);
     
 }
 #leftxenterbox {
@@ -323,6 +325,9 @@ footer {
 .bolded {
     font-weight: bold;
 }
+.underlined {
+    text-decoration: underline;
+}
 .indent1 {
     margin-left: calc((3vw + 3vh) * 1.4);
 }
@@ -332,6 +337,18 @@ footer {
 .indent3 {
     margin-left: calc((4vw + 4vh) * 1.4);
     line-height: calc((1vw + 1vh) * 1);
+    
+}
+.indent4 { 
+    margin-left: calc((5vw + 5vh) * 1.4);
+    line-height: calc((1vw + 1vh) * 1);
+   
+}
+.indent5 { 
+    margin-left: calc((6vw + 6vh) * 1.4);
+    line-height: calc((1vw + 1vh) * 1);
+    margin-top:0;
+   
 }
 .bulletsintext {
     font-size:calc((1vw + 1vh) * 0.75);
