@@ -206,7 +206,7 @@ body {
     position: absolute;
     inset: 0;
 
-    background-image: url("../../SipImages/hazard-pattern.svg");/*for whatever reason, I have to use "../../" even though "../" should be correct.
+    background-image: url("../../../SipImages/hazard-pattern.svg");/*for whatever reason, I have to use "../../../" even though "../../" should be correct.
     devtools is reading the file location as "pages/sipimages" instead of "/sipimages" otherwise*/
     background-repeat: repeat;
     background-size: 160px 140px;

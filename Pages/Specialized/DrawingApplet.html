@@ -3,38 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get To Know Dexter Paclebar</title>
-    <link rel="stylesheet" href="./Code/style.css">
+    <title>DrawingApplet</title>
+    <link rel="stylesheet" href="./Code/DrawingAppletStyle.css">
 </head>
 <body>
     
     <div id="centerbox" class="changecolor3">
-        <div id="leftxenterbox" class="changecolor1"></div>
-        <div id="centernums" class="normaltextcolor">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 
+        <div id="topwindowpanel" class="changecolor2" style="width:100%; height:5%; background-color:rgb(221, 221, 221); top:0; left:0; position:absolute;">  
+            <img src="../../smushednetbeanslogo.png" style=" width:3%;height:80%;object-fit:contain; top:10%; bottom:10%;position:absolute;">
+            <div id="toolbar" style="width:100%;position:relative; text-align:center; top:0;">
+                <label for="stroke" class="normaltextcolor">Stroke</label>
+                <input id="stroke" name='stroke' type="color">
+                <label for="lineWidth" class="normaltextcolor">Line Width</label>
+                <input id="lineWidth" name='lineWidth' type="number" value="5">
+                <button id="clear">Clear</button>
+                <button class="btn" onClick="downloadImage();">Download</button>
+                <input type="file" id="imageInput" accept="image/*" onClick="handleImage();" class="normaltextcolor">
+            </div>
         </div>
-        <!--<p class="indent2"> <span class="classblue">public class</span> <span class="normaltextcolor"><span class="bolded">Sip_Brief_Log</span> {</span></p>-->
-        <p class="indent2"> <span class="classblue">class</span> <span class="normaltextcolor bolded"> Sip_Brief_Log</span> <span class="classblue"> extends</span> <span class="normaltextcolor bolded"> SIP</span><span class="normaltextcolor"> {</span></p>
-
-        <!---------------------------->
-        <p class="indent1"><span class="classblue">public void</span> <span style="color:red"><span class="bolded">9/12/26</span>()</span></p>
-        <p class="indent1"><span class="normaltextcolor">{</span></p>
-        <p class="indent3"><span class="normaltextcolor">System.</span><span class="codegreen">out</span><span class="normaltextcolor">.println(</span><span class="codeorange">"No major 
-        development to report on this week apart from read and review of several browser's extension creation 
-        policies. Ex: Google Chrome's extension program policies 
-        <a href="https://developer.chrome.com/docs/webstore/program-policies/policies"> 
-        https://developer.chrome.com/docs/webstore/program-policies/policies</a>"</span><span class="normaltextcolor">);</span></p>
-      
-        <p class="indent1"><span class="normaltextcolor">}</span></p>
-
+        
+        <div id="mainwindow" class="changecolor4" style="width:100%; height:95%; top: 5%; background-color:rgb(148, 148, 148);position:absolute;">
+            <canvas id="drawing-board"></canvas>
+        </div>
     </div>
-<!--///////////////////////////////////////////////////////////////////////-->
-
     <div id="leftbar" class="changecolor3">
         <div id="leftscrollbar" class="changecolor2"></div>
 
         <div class="sideoptions">
             <div style ="width:10%; height:80%; min-height:20px; position:absolute; text-align:center; left:0; margin:2%;">
-                <img src="../CoffeeCup.png" id="image1" style="width:100%; height:100%; object-fit:contain;">
+                <img src="../../CoffeeCup.png" id="image1" style="width:100%; height:100%; object-fit:contain;">
             </div>
     
             <form action="Index.html" id="homepage" class="leftbarlinks">
@@ -45,7 +42,7 @@
         <!--------------------------->
         <div class="sideoptions">
             <div style ="width:10%; height:80%; min-height:20px; position:absolute; text-align:center; left:0; margin:2%;">
-                <img src="../CoffeeCup.png" id="image1" style="width:100%; height:100%; object-fit:contain;">
+                <img src="../../CoffeeCup.png" id="image1" style="width:100%; height:100%; object-fit:contain;">
             </div>
     
             <form action="PersonalProjects.html" id="minorpersonalProjects" class="leftbarlinks">
@@ -56,7 +53,7 @@
         <!--------------------------->
         <div class="sideoptions">
             <div style ="width:10%; height:80%; min-height:20px; position:absolute; text-align:center; left:0; margin:2%;">
-                <img src="../CoffeeCup.png" id="image1" style="width:100%; height:100%; object-fit:contain;">
+                <img src="../../CoffeeCup.png" id="image1" style="width:100%; height:100%; object-fit:contain;">
             </div>
     
             <form action="DrawingApplet.html" class="leftbarlinks">
@@ -67,7 +64,7 @@
         <!--------------------------->
         <div class="sideoptions">
             <div style ="width:10%; height:80%; min-height:20px; position:absolute; text-align:center; left:0; margin:2%;">
-                <img src="../CoffeeCup.png" id="image1" style="width:100%; height:100%; object-fit:contain;">
+                <img src="../../CoffeeCup.png" id="image1" style="width:100%; height:100%; object-fit:contain;">
             </div>
     
             <form action="Resume.html" class="leftbarlinks">
@@ -78,20 +75,20 @@
         <!--------------------------->
         <div class="sideoptions">
             <div style ="width:10%; height:80%; min-height:20px; position:absolute; text-align:center; left:0; margin:2%;">
-                <img src="../CoffeeCup.png" id="image1" style="width:100%; height:100%; object-fit:contain;">
+                <img src="../../CoffeeCup.png" id="image1" style="width:100%; height:100%; object-fit:contain;">
             </div>
     
             <form action="SipProject.html" class="leftbarlinks">
                 <input type="submit" value="SIP.java" class="leftbarlinksinputs changecolor3 normaltextcolor">
             </form>
         </div>
+        
     </div>
     <!--<div id="rightbar"></div>-->
-<!--///////////////////////////////////////////////////////////////////////-->
     <div id="topbar" class="changecolor1">
         
         <div id="toptopbar" class="changecolor1">
-            <img src="../netbeansui.png" id="image2" style="width:100%; height:100%; object-fit:contain;">
+            <img src="../../netbeansui.png" id="image2" style="width:100%; height:100%; object-fit:contain;">
             <button id="themebutton" class="btn" onClick="ChangeTheme();" style="position:absolute; width:100%; height:100%;"></button>
             <button id="themeindicator" class="btn" onClick="ChangeTheme();">&lt Light Mode &gt</button>
         </div>
@@ -119,38 +116,24 @@
         </div>
     </div>
 
-<!--//////////////////////////////////////////////////////////////-->
     <div id="bottombar" class="changecolor3">
         <div id="footertopbar" class="changecolor2"></div>
         <div id="footertopbarbox" class="changecolor3">
-            <p class="normaltextcolor">Contact Information:</p>
+            <p id="GameName" class="normaltextcolor">Output:</p>
         </div>
 
-        <form action="SipProject.html" id="footertopbarbutton" class="changecolor1">
-                <input id="briefsummary" type="submit" value="Return" class="btn normaltextcolor" style="position:absolute; width:100%; height:100%;">
-        </form>
-
         <footer id="theinformationfooter">
-            <p id="p1" class="normaltextcolor">Email:</p>
-            <ul id="u1" class="normaltextcolor">
-                <li>Personal: dexpaclebar@gmail.com</li>
-                <li>Backup: dexterpaclebar@gmail.com</li>
-                <li>School: dexpacle@uat.edu</li>
-            </ul>
+            <p id="p1" class="normaltextcolor">If you are experiencing issues with line drawing not matching mouse position, it is likely due to a change in
+            window resolution. Please refresh the page. (Note that this will also clear your drawing!)
+            </p>
             <p id="footertext">BUILD SUCCESSFUL</p>
         </footer>
 
-        <footer id="theinformationfooter2">
-            <p id="p2" class="normaltextcolor">Phone Number:</p>
-            <ul id="u2" class="normaltextcolor">
-                <li>+(1)760-521-5785</li>
-            </ul>
-        </footer>
     </div>
 
 
 </body>
 </html>
 
-<script src="./Code/indexcode.js"></script>
 <script src="./Code/themechanger.js"></script>
+<script src="./Code/DrawingAppletCode.js"></script>

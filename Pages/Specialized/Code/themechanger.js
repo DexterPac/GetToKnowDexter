@@ -29,7 +29,7 @@ function ImportTheme() {
     isTrueSet = (isnormal === "true");
     if(isTrueSet)
     {
-        document.getElementById("image2").src = "../netbeansui.png"
+        document.getElementById("image2").src = "../../netbeansui.png"
         let smallthemebox = document.getElementById("themeindicator")
         smallthemebox.style.borderColor = "black"
         smallthemebox.style.color = "black"
@@ -104,7 +104,7 @@ function ImportTheme() {
     }
     else
     {
-        document.getElementById("image2").src = "../netbeansui2.png"
+        document.getElementById("image2").src = "../../netbeansui2.png"
         let smallthemebox = document.getElementById("themeindicator")
         smallthemebox.style.borderColor = "#C7C7C7"
         smallthemebox.style.color = "white"
