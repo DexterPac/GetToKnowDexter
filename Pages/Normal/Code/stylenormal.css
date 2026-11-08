@@ -1,0 +1,130 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #F5F0E6;
+    color: #292531;
+}
+.bolded {
+    font-weight: bold;
+}
+/*//////////////////////////TOP CONTENT////////////////////////////////*/
+#TopNavigatioBar {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 10vh;
+    top:0;
+    left: 0;
+    background-color: #514477;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    color: white;
+    z-index: 10;
+}
+.topnavbuttons {
+    margin-right: 1%;
+    margin-left:0;
+    margin-top:1%;
+    margin-bottom:1%;
+    width: 10%;
+    height: 80%;
+    font-size: 4vh;
+    background: none;
+    border: none;
+    color: white;
+}
+.topnavbuttons:hover {
+    cursor: pointer;
+    background-color: rgba(166, 154, 185, 0.25); /*#A69AB9*/
+}
+
+/*//////////////////////////HEADER CONTENT////////////////////////////////*/
+#HeaderContentBox {
+    position: relative;
+    width:100%;
+    height:45vh;
+    margin: 0;
+    padding: 0;
+    padding-top:3%;
+    top:0;
+    border-bottom: 5px solid #292531;
+    p {
+        margin:0;
+        margin-left: 2%;
+        font-size:calc((1vw + 1vh) * 0.8);
+    }
+    h1 {
+        font-size:calc((2vw + 2vh) * 1.5);
+        margin: 0;
+        margin-left: 2%;
+    }
+}
+#HeaderName {
+    width: 25%;
+    height: 25%;
+    line-height: calc((2vw + 2vh) * 1.2);
+}
+
+/*//////////////////////////MAIN CONTENT////////////////////////////////*/
+#MainContentBox {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    min-height: 35vh;
+    margin: 0;
+    padding: 0;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+/*//////////////////////////FOOTER CONTENT////////////////////////////////*/
+#ContactInfoBox {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 100%;
+    height: 15vh;
+    left: 0;
+    bottom: 0;
+    background-color: #292531;
+    color: white;
+    padding:0;
+    margin:0;
+
+    p{
+        font-size:calc((1vw + 1vh) * 0.8);
+        line-height: calc((1vw + 1vh) * 0.3);
+        margin-bottom: 0;
+    }
+    h4 {
+        font-size:calc((1vw + 1vh) * 1);
+        margin-bottom: 0;
+        margin-top:1%;
+    }
+}
+#ContactIndicator {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size:calc((1vw + 1vh) * 1.2);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    border-left: 1px solid white;
+    white-space: nowrap;
+}
+.footercontentbox {
+    margin-left: 1.5%;
+    margin-right: 5%;
+    margin-top:0;
+    display: flex;
+    flex-direction: column;
+}

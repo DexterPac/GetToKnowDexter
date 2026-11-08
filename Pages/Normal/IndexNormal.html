@@ -4,38 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get To Know Dexter Paclebar</title>
+    <link rel="stylesheet" href="./Code/stylenormal.css">
 </head>
 <body>
-    <h2>
-        This is designed to be  a "normal version" ie. non personalized edition, so this is a work in progress.
-    </h2>
+    <!--------------------TOP NAVIGATION BAR----------------->
+    <div id="TopNavigatioBar">
+        <button id="HomeButton" class="topnavbuttons">HOME</button>
+        <button id="BoardsButton" class="topnavbuttons">BOARDS</button>
+        <button id="SipButton" class="topnavbuttons" onclick="window.location.href='./SipProjectNormal.html'">SIP</button>
+        <button id="ContactInfoButton" class="topnavbuttons">CONTACT</button>
+    </div>
+    <div id="faketopdiv" style="margin:0;padding:0;width:100%;height:10vh;top:0;left:0;"></div>
 
-    <label for="siplink">Below is the board/objectives for a Computer Science major</label>
-    <ul name="boardslist">
-        <li>Analyze problems and design, build, and test software solutions.</li>
-        <li>Develop skills using more than one programming language and development environment.</li>
-        <li>Implement data-driven solutions.</li>
-        <li>Design and implement software solutions for multiple platforms.</li>
-        <li>Document development proccess alongside industry standards.</li>
-        <li>Implement and analyze data structure techniques along with sorting and searching algorithms.</li>
-    </ul>
+    <!--------------------HEADER CONTENT BOX----------------->
+    <div id="HeaderContentBox">
+        <p id="HeaderSmallText">Computer Science/Game Development</p>
+        <h1 id="HeaderName">DEXTER PACLEBAR</h1>
+    </div>
 
-    <form action="./SipProjectNormal.html">
-        <label for="siplink">Click the button to go to the SIP Page</label>
-        <input type="submit" value="Sip Project" name="siplink">
-    </form>
+    <!--------------------MAIN CONTENT BOX----------------->
+    <div id="MainContentBox">
 
-    <br>
+    </div>
 
-    <p>Email:</p>
-    <ul>
-        <li>Personal: dexpaclebar@gmail.com</li>
-        <li>Backup: dexterpaclebar@gmail.com</li>
-        <li>School: dexpacle@uat.edu</li>
-    </ul>
-    <p>Phone Number:</p>
-    <ul>
-        <li>+(1)760-521-5785</li>
-    </ul>
+    <!--------------------FOOTER CONTENT BOX----------------->
+    <footer id="ContactInfoBox">
+        <div id=ContactIndicator>Contact</div>
+        <div class="footercontentbox">
+            <h4>Email:</h4>
+            <p>Personal: dexpaclebar@gmail.com</p>
+            <p>Backup: dexterpaclebar@gmail.com</p>
+            <p>School: dexpacle@uat.edu</p>
+        </div>
+        <!---->
+        <div class="footercontentbox">
+            <h4>Phone Number</h4>
+            <p>+(1)760-521-5785</p>
+        </div>
+    </footer>
+
 </body>
 </html>
