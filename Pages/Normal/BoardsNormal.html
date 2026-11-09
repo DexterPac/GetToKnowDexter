@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get To Know Dexter Paclebar</title>
+    <link rel="stylesheet" href="./Code/stylenormal.css">
+    <link rel="stylesheet" href="./Code/boardsstylenormal.css">
+</head>
+<body>
+    <!--------------------TOP NAVIGATION BAR----------------->
+    <div id="TopNavigatioBar">
+        <button id="HomeButton" class="topnavbuttons" onclick="window.location.href='./IndexNormal.html'">HOME</button>
+        <button id="BoardsButton" class="topnavbuttons" onclick="window.location.href='./BoardsNormal.html'">BOARDS</button>
+        <button id="SipButton" class="topnavbuttons" onclick="window.location.href='./SipProjectNormal.html'">SIP</button>
+        <button id="ContactInfoButton" class="topnavbuttons">CONTACT</button>
+    </div>
+    <div id="faketopdiv" style="margin:0;padding:0;width:100%;height:10vh;top:0;left:0;"></div>
+
+    <!--------------------HEADER CONTENT BOX----------------->
+    <div id="HeaderContentBox2">
+        <h1 id="HeaderLargeText" class="underlined">OBJECTIVES</h1>
+        <p>These are objectives that reflect the time and work necessary in order to earn a Computer Science 
+            degree at UAT.
+        </p>
+
+        <div class="anchorbuttonssection">
+            <button type="button" id="Objective1Btn" class="anchorlinkbuttons" onclick="location.href='#Objective1'">Objective 1</button>
+            <button type="button" id="Objective2Btn" class="anchorlinkbuttons" onclick="location.href='#Objective1'">Objective 2</button>
+            <button type="button" id="Objective3Btn" class="anchorlinkbuttons" onclick="location.href='#Objective1'">Objective 3</button>
+        </div>
+        <div class="anchorbuttonssection">
+            <button type="button" id="Objective4Btn" class="anchorlinkbuttons" onclick="location.href='#Objective1'">Objective 4</button>
+            <button type="button" id="Objective5Btn" class="anchorlinkbuttons" onclick="location.href='#Objective1'">Objective 5</button>
+            <button type="button" id="Objective6Btn" class="anchorlinkbuttons" onclick="location.href='#Objective1'">Objective 6</button>
+        </div>
+    </div>
+
+    <!--------------------MAIN CONTENT BOX----------------->
+    <div id="MainContentBox">
+        <div id="Objective1" class="objectivesection">
+            <h2>OBJECTIVE 1</h2>
+            <p>Document the software development process to analyze a problem and to design, build, and test 
+                software solutions.</p>
+            <div class="objentry">
+                <div class="slidercontainer">
+                    <div class="imgslider">
+                        <img id="Obj1Img1" class="img1" src="../../SipImages/Goblinface.png" alt="image">
+                        <img id="Obj1Img2" class="img2" src="../../SipImages/sipimage4.png" alt="image">
+                    </div>    
+                    <button id="Obj1ImgSet1" class="previmgbtn"></button>
+                    <button id="Obj1ImgSet2" class="nextimgbtn"></button>
+                </div>
+                <p2 id="Obj1Desc" class="objdesc">Task Goblin is my Student Innovation Project (SIP) at UAT. 
+                    This project gave me the opportunity to identify the need for a digital distraction mitigation tool. 
+                    Subsequently, I would refine the project's scope and establish a planned layout to determine 
+                    the distraction features would be a more beneficial focus. Weekly stand-ups/updates and 
+                    testing amongst peers were also conducted to help improve user experience, especially user 
+                    navigation of the extension.
+                    <br>
+                    More information can be viewed about this specific project from the SIP subpage or visit the project's 
+                    GitHub.</p2>
+            </div>
+            <div class="objprojbtnsection">
+                <button class="objprojdemobtn" onclick="window.location.href='https://github.com/PeanutJar/TaskGoblin.git'">GitHub</button>
+                <button class="objprojdemobtn" onclick="window.location.href='https://docs.google.com/document/d/1bihToLaJfFjrs0sOA2xMtoFrwuPbFpFJAdEe1G_dzdo/edit?usp=sharing'">Documentation</button>
+            </div>   
+        </div>
+    </div>
+
+    <!--------------------FOOTER CONTENT BOX----------------->
+    <footer id="ContactInfoBox">
+        <div id=ContactIndicator>Contact</div>
+        <div class="footercontentbox">
+            <h4>Email:</h4>
+            <p>Personal: dexpaclebar@gmail.com</p>
+            <p>Backup: dexterpaclebar@gmail.com</p>
+            <p>School: dexpacle@uat.edu</p>
+        </div>
+        <!---->
+        <div class="footercontentbox">
+            <h4>Phone Number</h4>
+            <p>+(1)760-521-5785</p>
+        </div>
+    </footer>
+    <script src="./Code/boardsimgsliderscript.js"></script>
+</body>
+</html>

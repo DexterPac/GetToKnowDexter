@@ -1,0 +1,174 @@
+html {
+    scroll-behavior: smooth; /*used for smooth anchor link transitions*/
+    /*scroll-padding-top: 150px;*/
+}
+/*//////////////////////////HEADER CONTENT////////////////////////////////*/
+.anchorbuttonssection {
+    position: relative;
+    width:80%;
+    min-height: 10vh;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 2%;
+
+}
+.anchorlinkbuttons {
+    width: 20%;
+    min-height: 8vh;
+    border: 8px solid #514477;
+    border-radius: 25px; 
+    background-color: #A69AB9;
+    font-size:calc((1vw + 1vh) * 1.2);
+    cursor: pointer;
+    color: #292531;
+}
+.anchorlinkbuttons:hover {
+    background-color: rgb(126, 114, 145); /*#A69AB9*/
+    border-color: rgb(41, 28, 79);
+    color: white;
+}
+/*//////////////////////////MAIN CONTENT////////////////////////////////*/
+.objectivesection {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    min-height: 20vh;
+    margin: 0;
+    padding: 0;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h2 {
+        font-size:calc((1vw + 1vh) * 1.8);
+        margin: 0;
+        margin-bottom: 1%;
+    }
+    p {
+        font-size:calc((1vw + 1vh) * 1);
+        margin: 0;
+    }
+}
+.objentry {
+    position: relative;
+    width: 80%;
+    margin:0;
+    margin-top: 0.5%;
+    padding: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    /*flex: 1;*/
+}
+.slidercontainer {
+    position: relative;
+    display: flex;
+    width:35%;
+    aspect-ratio: 16 / 9;
+    padding: 1%;
+    margin-left: 1%;
+    overflow: hidden;
+    border: 3px solid #292531;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.15);
+}
+.imgslider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transform: translateX(100%); /*outgoing image returns to hidden position*/
+        transition: transform 0.45s ease-in-out;
+    }
+    img.active {
+        transform: translateX(0);
+    }
+    img.left{
+        transform: translateX(-100%);
+    }
+    img.right {
+        transform: translateX(100%);
+    }
+}
+.nextimgbtn, .previmgbtn {
+    position: absolute;
+    width: 5%;
+    height:100%;
+    font-size:calc((1vw + 1vh) * 1.4);
+    /*background-color: rgba(41, 37, 49, 0.5);*/
+    color: #292531;
+    border: none;
+    top:0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.nextimgbtn {
+    right:0;
+}
+.nextimgbtn:before {
+    content: "\00BB";
+}
+.previmgbtn {
+    left:0;
+}
+.previmgbtn:before {
+    content: "\00AB";
+}
+.nextimgbtn:hover, .previmgbtn:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+
+}
+.objdesc {
+    font-size:calc((1vw + 1vh) * 1);
+    background-color: #D8CFE6;
+    width: 57.5%;
+    padding: 1%;
+    margin-right: 1%;
+    margin-inline: 1.5%;
+}
+
+.objprojbtnsection {
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin:0;
+    padding: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.objprojdemobtn {
+    width: 15%;
+    aspect-ratio: 4 / 1;
+    border: 5px solid #A69AB9;
+    border-radius: 25px; 
+    background-color: #D8CFE6;
+    font-size:calc((1vw + 1vh) * 1.2);
+    cursor: pointer;
+    color: #292531;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.objprojdemobtn:hover {
+    background-color: rgb(176, 167, 190); /*#A69AB9*/
+    border-color: rgb(126, 114, 145);
+    color: black;
+}
