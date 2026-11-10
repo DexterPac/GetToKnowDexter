@@ -1,37 +1,57 @@
 
+//different imageset for each project image grouping
 const imageset1 = [
     "../../SipImages/Goblinface.png",
     "../../SipImages/sipimage4.png",
     "../../SipImages/rdme.png",
     "../../SipImages/taskgoblinupdate3.png"
 ];
+const imageset2 = [
+    "../../BoardsContent/NEWSimg1.png",
+    "../../BoardsContent/NEWSimg2.png",
+    "../../BoardsContent/NEWSimg3.png"
+];
 
-//tracks the current image index
+//tracks the current image index (different curretimage for each project image grouping)
 let currentimages = {
-    currentimage1: 0
+    currentimage1: 0,
+    currentimage2: 0
 };
 //tracks which HTML image element <img> is currently visible
 let activeimages = {
-    currentimage1: 0
+    currentimage1: 0,
+    currentimage2: 0
 };
 
 // prevents multiple transitions from overlapping
 let sliderbusy = {
-    currentimage1: false
+    currentimage1: false,
+    currentimage2: false
 };
 
+//obj set 1
 const Obj1Img1 = document.getElementById("Obj1Img1");
 const Obj1Img2 = document.getElementById("Obj1Img2");
+const Obj1Img3 = document.getElementById("Obj1Img3");
+const Obj1Img4 = document.getElementById("Obj1Img4");
 
 //set initial image
 Obj1Img1.classList.add("active");
 Obj1Img2.classList.add("enter-right");
+Obj1Img3.classList.add("active");
+Obj1Img4.classList.add("enter-right");
 
 document.getElementById("Obj1ImgSet1").addEventListener("click",
     (event) => LoadPrevious(event, imageset1, currentimages, "currentimage1", Obj1Img1, Obj1Img2));
 
 document.getElementById("Obj1ImgSet2").addEventListener("click",
     (event) => LoadNext(event, imageset1, currentimages, "currentimage1", Obj1Img1, Obj1Img2));
+
+document.getElementById("Obj1ImgSet3").addEventListener("click",
+    (event) => LoadPrevious(event, imageset2, currentimages, "currentimage2", Obj1Img3, Obj1Img4));
+
+document.getElementById("Obj1ImgSet4").addEventListener("click",
+    (event) => LoadNext(event, imageset2, currentimages, "currentimage2", Obj1Img3, Obj1Img4));
 
 
 function ChangeImage(event, imgset, imgindex, indexname, image1, image2, direction) {
