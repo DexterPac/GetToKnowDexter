@@ -22,26 +22,47 @@ const imageset4 = [
     "../../BoardsContent/Shipimg2.png",
     "../../BoardsContent/Shipimg3.png"
 ];
+const imageset5 = [
+    "../../BoardsContent/MoviePredictionimg1.png",
+    "../../BoardsContent/MoviePredictionimg2.png",
+    "../../BoardsContent/MoviePredictionimg3.png"
+];
+const imageset6 = [
+    "../../BoardsContent/Communityimg1.png",
+    "../../BoardsContent/Communityimg2.png",
+    "../../BoardsContent/Communityimg3.png",
+    "../../BoardsContent/Communityimg4.png",
+    "../../BoardsContent/Communityimg5.png",
+    "../../BoardsContent/Communityimg6.png"
+];
 
 //tracks the current image index (different curretimage for each project image grouping)
 let currentimages = {
     currentimage1: 0,
     currentimage2: 0,
     currentimage3: 0,
-    currentimage4: 0
+    currentimage4: 0,
+    currentimage5: 0,
+    currentimage6: 0
 };
 //tracks which HTML image element <img> is currently visible
 let activeimages = {
     currentimage1: 0,
     currentimage2: 0,
     currentimage3: 0,
-    currentimage4: 0
+    currentimage4: 0,
+    currentimage5: 0,
+    currentimage6: 0
 };
 
 // prevents multiple transitions from overlapping
 let sliderbusy = {
     currentimage1: false,
-    currentimage2: false
+    currentimage2: false,
+    currentimage3: false,
+    currentimage4: false,
+    currentimage5: false,
+    currentimage6: false
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -58,6 +79,12 @@ const Obj2Img2 = document.getElementById("Obj2Img2");
 const Obj2Img3 = document.getElementById("Obj2Img3");
 const Obj2Img4 = document.getElementById("Obj2Img4");
 
+//obj set 3
+const Obj3Img1 = document.getElementById("Obj3Img1");
+const Obj3Img2 = document.getElementById("Obj3Img2");
+const Obj3Img3 = document.getElementById("Obj3Img3");
+const Obj3Img4 = document.getElementById("Obj3Img4");
+
 //set initial image
 Obj1Img1.classList.add("active");
 Obj1Img2.classList.add("enter-right");
@@ -68,6 +95,11 @@ Obj2Img1.classList.add("active");
 Obj2Img2.classList.add("enter-right");
 Obj2Img3.classList.add("active");
 Obj2Img4.classList.add("enter-right");
+
+Obj3Img1.classList.add("active");
+Obj3Img2.classList.add("enter-right");
+Obj3Img3.classList.add("active");
+Obj3Img4.classList.add("enter-right");
 
 document.getElementById("Obj1ImgSet1").addEventListener("click",
     (event) => LoadPrevious(event, imageset1, currentimages, "currentimage1", Obj1Img1, Obj1Img2));
@@ -92,6 +124,19 @@ document.getElementById("Obj2ImgSet3").addEventListener("click",
 
 document.getElementById("Obj2ImgSet4").addEventListener("click",
     (event) => LoadNext(event, imageset4, currentimages, "currentimage4", Obj2Img3, Obj2Img4));
+////////
+document.getElementById("Obj3ImgSet1").addEventListener("click",
+    (event) => LoadPrevious(event, imageset5, currentimages, "currentimage5", Obj3Img1, Obj3Img2));
+
+document.getElementById("Obj3ImgSet2").addEventListener("click",
+    (event) => LoadNext(event, imageset5, currentimages, "currentimage5", Obj3Img1, Obj3Img2));
+
+document.getElementById("Obj3ImgSet3").addEventListener("click",
+    (event) => LoadPrevious(event, imageset6, currentimages, "currentimage6", Obj3Img3, Obj3Img4));
+
+document.getElementById("Obj3ImgSet4").addEventListener("click",
+    (event) => LoadNext(event, imageset6, currentimages, "currentimage6", Obj3Img3, Obj3Img4));
+
 
 
 ////////////////////////////////////////////////////////////////////////////////
