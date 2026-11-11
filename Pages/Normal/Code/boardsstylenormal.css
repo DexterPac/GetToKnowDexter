@@ -1,6 +1,6 @@
 html {
     scroll-behavior: smooth; /*used for smooth anchor link transitions*/
-    /*scroll-padding-top: 150px;*/
+    scroll-padding-top: 10%;
 }
 /*//////////////////////////HEADER CONTENT////////////////////////////////*/
 .anchorbuttonssection {
