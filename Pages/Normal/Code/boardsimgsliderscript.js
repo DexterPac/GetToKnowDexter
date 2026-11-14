@@ -35,6 +35,15 @@ const imageset6 = [
     "../../BoardsContent/Communityimg5.png",
     "../../BoardsContent/Communityimg6.png"
 ];
+const imageset7 = [
+    "../../BoardsContent/Cameraimg1.png",
+    "../../BoardsContent/Cameraimg2.png"
+];
+const imageset8 = [
+    "../../BoardsContent/3Dimg1.png",
+    "../../BoardsContent/3Dimg2.png",
+    "../../BoardsContent/3Dimg3.png"
+];
 
 //tracks the current image index (different curretimage for each project image grouping)
 let currentimages = {
@@ -43,7 +52,9 @@ let currentimages = {
     currentimage3: 0,
     currentimage4: 0,
     currentimage5: 0,
-    currentimage6: 0
+    currentimage6: 0,
+    currentimage7: 0,
+    currentimage8: 0
 };
 //tracks which HTML image element <img> is currently visible
 let activeimages = {
@@ -52,7 +63,9 @@ let activeimages = {
     currentimage3: 0,
     currentimage4: 0,
     currentimage5: 0,
-    currentimage6: 0
+    currentimage6: 0,
+    currentimage7: 0,
+    currentimage8: 0
 };
 
 // prevents multiple transitions from overlapping
@@ -62,7 +75,9 @@ let sliderbusy = {
     currentimage3: false,
     currentimage4: false,
     currentimage5: false,
-    currentimage6: false
+    currentimage6: false,
+    currentimage7: false,
+    currentimage8: false
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -85,6 +100,12 @@ const Obj3Img2 = document.getElementById("Obj3Img2");
 const Obj3Img3 = document.getElementById("Obj3Img3");
 const Obj3Img4 = document.getElementById("Obj3Img4");
 
+//obj set 4
+const Obj4Img1 = document.getElementById("Obj4Img1");
+const Obj4Img2 = document.getElementById("Obj4Img2");
+const Obj4Img3 = document.getElementById("Obj4Img3");
+const Obj4Img4 = document.getElementById("Obj4Img4");
+
 //set initial image
 Obj1Img1.classList.add("active");
 Obj1Img2.classList.add("enter-right");
@@ -101,43 +122,58 @@ Obj3Img2.classList.add("enter-right");
 Obj3Img3.classList.add("active");
 Obj3Img4.classList.add("enter-right");
 
+Obj4Img1.classList.add("active");
+Obj4Img2.classList.add("enter-right");
+Obj4Img3.classList.add("active");
+Obj4Img4.classList.add("enter-right");
+
 document.getElementById("Obj1ImgSet1").addEventListener("click",
     (event) => LoadPrevious(event, imageset1, currentimages, "currentimage1", Obj1Img1, Obj1Img2));
 
 document.getElementById("Obj1ImgSet2").addEventListener("click",
     (event) => LoadNext(event, imageset1, currentimages, "currentimage1", Obj1Img1, Obj1Img2));
-
+////
 document.getElementById("Obj1ImgSet3").addEventListener("click",
     (event) => LoadPrevious(event, imageset2, currentimages, "currentimage2", Obj1Img3, Obj1Img4));
 
 document.getElementById("Obj1ImgSet4").addEventListener("click",
     (event) => LoadNext(event, imageset2, currentimages, "currentimage2", Obj1Img3, Obj1Img4));
-////////
+////////////////////////
 document.getElementById("Obj2ImgSet1").addEventListener("click",
     (event) => LoadPrevious(event, imageset3, currentimages, "currentimage3", Obj2Img1, Obj2Img2));
 
 document.getElementById("Obj2ImgSet2").addEventListener("click",
     (event) => LoadNext(event, imageset3, currentimages, "currentimage3", Obj2Img1, Obj2Img2));
-
+////
 document.getElementById("Obj2ImgSet3").addEventListener("click",
     (event) => LoadPrevious(event, imageset4, currentimages, "currentimage4", Obj2Img3, Obj2Img4));
 
 document.getElementById("Obj2ImgSet4").addEventListener("click",
     (event) => LoadNext(event, imageset4, currentimages, "currentimage4", Obj2Img3, Obj2Img4));
-////////
+////////////////////////
 document.getElementById("Obj3ImgSet1").addEventListener("click",
     (event) => LoadPrevious(event, imageset5, currentimages, "currentimage5", Obj3Img1, Obj3Img2));
 
 document.getElementById("Obj3ImgSet2").addEventListener("click",
     (event) => LoadNext(event, imageset5, currentimages, "currentimage5", Obj3Img1, Obj3Img2));
-
+////
 document.getElementById("Obj3ImgSet3").addEventListener("click",
     (event) => LoadPrevious(event, imageset6, currentimages, "currentimage6", Obj3Img3, Obj3Img4));
 
 document.getElementById("Obj3ImgSet4").addEventListener("click",
     (event) => LoadNext(event, imageset6, currentimages, "currentimage6", Obj3Img3, Obj3Img4));
+////////////////////////
+document.getElementById("Obj4ImgSet1").addEventListener("click",
+    (event) => LoadPrevious(event, imageset7, currentimages, "currentimage7", Obj4Img1, Obj4Img2));
 
+document.getElementById("Obj4ImgSet2").addEventListener("click",
+    (event) => LoadNext(event, imageset7, currentimages, "currentimage7", Obj4Img1, Obj4Img2));
+////
+document.getElementById("Obj4ImgSet3").addEventListener("click",
+    (event) => LoadPrevious(event, imageset8, currentimages, "currentimage8", Obj4Img3, Obj4Img4));
 
+document.getElementById("Obj4ImgSet4").addEventListener("click",
+    (event) => LoadNext(event, imageset8, currentimages, "currentimage8", Obj4Img3, Obj4Img4));
 
 ////////////////////////////////////////////////////////////////////////////////
 function ChangeImage(event, imgset, imgindex, indexname, image1, image2, direction) {
